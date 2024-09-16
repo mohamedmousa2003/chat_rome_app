@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:chat_rome_app/pages/auth/login/login_view.dart';
 import 'package:chat_rome_app/shared/components/custom_extension.dart';
@@ -12,10 +13,11 @@ class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context,LoginView.routeName);
+    Timer(const Duration(seconds: 4), () {
+      Navigator.pushReplacementNamed(context, LoginView.routeName);
     });
     return Scaffold(
+      backgroundColor: AppColors.white,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -30,11 +32,12 @@ class SplashView extends StatelessWidget {
             ),
           ),
           30.height,
+          // package animated_text_kit
           DefaultTextStyle(
             style: const TextStyle(
-               fontSize: 30,
-            color: AppColors.black,
-            fontWeight: FontWeight.bold,
+              fontSize: 30,
+              color: AppColors.black,
+              fontWeight: FontWeight.bold,
             ),
             child: AnimatedTextKit(
               animatedTexts: [

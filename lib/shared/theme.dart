@@ -3,16 +3,22 @@ import 'package:flutter/material.dart';
 
 class ApplicationTheme {
   static ThemeData themeLight = ThemeData(
-      // scaffoldBackgroundColor: AppColors.transparent,
+      scaffoldBackgroundColor: AppColors.transparent,
+      appBarTheme: const AppBarTheme(
+        backgroundColor: AppColors.transparent,
+        elevation: 0,
+        centerTitle: true,
+        iconTheme: IconThemeData(color: AppColors.white),
+      ),
       textTheme: const TextTheme(
-          bodyLarge:  TextStyle(
+          bodyLarge: TextStyle(
             fontSize: 25,
-            color: AppColors.blue,
+            color: AppColors.white,
             fontWeight: FontWeight.bold,
           ),
           bodyMedium: TextStyle(
-            fontSize: 20,
-           
+            fontSize: 22,
+            color: AppColors.white,
             fontWeight: FontWeight.bold,
           ),
           bodySmall: TextStyle(
